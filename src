@@ -1,0 +1,25 @@
+create database empresadesoftware;
+USE empresadesoftware;
+create table funcionarios (
+id_funcionario int auto_increment primary key,
+nome int not null,
+cargo int not null,
+salario int not null
+);
+create table projetos (
+id_projeto int auto_increment primary key,
+nome_projeto int not null,
+id_gerente int not null
+);
+create table tarefas (
+id_tarefa int auto_increment primary key,
+id_projeto int not null,
+descricao text not null,
+status int not null
+);
+create table alocacoes (
+id_alocacao int auto_increment primary key,
+id_funcionario int not null,
+id_tarefa int not null,
+horas_trabalhadas varchar(15) not null
+);
